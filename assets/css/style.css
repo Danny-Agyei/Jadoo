@@ -333,9 +333,9 @@ input:focus {
     margin-bottom: var(--spacing-4x);
 }
 
-
-
 .navbar__btn {
     border: 1px solid var(--color-text-black);
     padding: var(--spacing-2x) var(--spacing-7x);
 }
+
+/* Hero  */

@@ -47,13 +47,13 @@
     --primary-font: "Inter", arial, sans-serif;
 
     /* Font Text Size  */
-    --text-base: 0.85rem;
+    --text-base: 0.8rem;
 
     --text-size-h1: 3.75rem;
-    --text-size-h2: 2.15rem;
+    --text-size-h2: 2.35rem;
     --text-size-h3: 2.1rem;
     --text-size-h4: 1.564rem;
-    --text-size-title: 1.407rem;
+    --text-size-title: 1.4rem;
     --text-size-p: 1.25rem;
     --text-size-small: 0.9rem;
     --text-size-btn: 1.25rem;
@@ -97,6 +97,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -172,7 +173,10 @@ input:focus {
     font-size: var(--text-size-h3);
 }
 
-.u-section-label {}
+.u-section-label {
+    font-weight: var(--fw-500);
+    font-size: var(--text-size-title);
+}
 
 .u-title {
     font-size: var(--text-size-title);
@@ -247,3 +251,91 @@ input:focus {
 }
 
 /* Header  */
+.header {
+    padding: var(--spacing-7x) 0;
+    position: relative;
+}
+
+.header__menu {
+    width: 30px;
+}
+
+.header__overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 100vh;
+    left: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 400ms ease;
+    width: 100%;
+    z-index: 3;
+}
+
+.header__overlay.is-open {
+    visibility: visible;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navbar {
+    background-color: var(--color-bg-white);
+    gap: var(--spacing-10x);
+    height: 100vh;
+    left: 0;
+    max-width: 375px;
+    opacity: 0;
+    position: fixed;
+    padding: var(--spacing-7x) var(--spacing-7x);
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 400ms ease;
+    width: 100%;
+    z-index: 4;
+}
+
+.navbar.is-open {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.navbar__list {
+    gap: var(--spacing-4x);
+}
+
+.navbar__link {
+    font-weight: var(--fw-500);
+    position: relative;
+}
+
+.navbar__link::after {
+    background-color: var(--color-bg-accent);
+    bottom: -8px;
+    content: "";
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    transition: all 420ms ease;
+}
+
+.navbar__link:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar__action {
+    gap: var(--spacing-6x);
+    margin-top: auto;
+    margin-bottom: var(--spacing-4x);
+}
+
+
+
+.navbar__btn {
+    border: 1px solid var(--color-text-black);
+    padding: var(--spacing-2x) var(--spacing-7x);
+}

@@ -20,29 +20,35 @@
 
 <body>
   <!-- 
-        #Header
-    -->
+     #Header
+  -->
   <header class="header">
     <div class="l-container">
       <div class="l-flex-row header__warapper u-align-center u-justify-between">
         <img src="assets/images/logo.png" alt="Jadoo home" class="logo" />
         <button class="btn">
-          <img src="assets/images/menu.png" alt="" class="header__menu" aria-label="nav toggler" />
+          <img src="assets/images/menu.png" alt="" class="header__menu js-nav-toggler" aria-label="open nav menu" />
         </button>
-        <nav class="navbar">
-          <div class="navbar__menu">
-            <ul class="navbar__list">
-              <li><a href="#" class="navbar__link"> Destinations </a></li>
-              <li><a href="#" class="navbar__link">Hotels </a></li>
-              <li><a href="#" class="navbar__link"> Flights </a></li>
-              <li><a href="#" class="navbar__link"> Bookings </a></li>
-            </ul>
-            <div class="navbar__action l-flex-row">
-              <a href="#" class="navbar__link">Login</a>
-              <a href="#" class="navbar__link navbar__btn">Sign up</a>
-            </div>
+        <nav class="navbar js-nav l-flex-col">
+          <div class="navbar__header l-flex-row u-justify-between u-align-center">
+            <img src="assets/images/logo.png" alt="Jadoo home" class="logo" />
+            <button class="btn">
+              <img src="assets/images/close.svg" alt="" class="navbar__close js-nav-toggler"
+                aria-label="close nav menu" />
+            </button>
+          </div>
+          <ul class="navbar__list l-flex-col">
+            <li><a href="#" class="navbar__link"> Destinations </a></li>
+            <li><a href="#" class="navbar__link">Hotels </a></li>
+            <li><a href="#" class="navbar__link"> Flights </a></li>
+            <li><a href="#" class="navbar__link"> Bookings </a></li>
+          </ul>
+          <div class="navbar__action l-flex-row u-align-center">
+            <a href="#" class="">Login</a>
+            <a href="#" class="navbar__btn btn">Sign up</a>
           </div>
         </nav>
+        <div class="header__overlay js-nav-overlay"></div>
       </div>
     </div>
   </header>
@@ -197,7 +203,7 @@
     <!-- 
         #Testimonials
     -->
-    <section class="testimonial">
+    <section class="testimonial" style="display: none;">
       <div class="l-container">
         <div class="l-inner testimonial__inner l-grid">
           <div>

@@ -1,6 +1,6 @@
 const navbar = document.querySelector(".js-nav");
 const navbarOverlay = document.querySelector(".js-nav-overlay");
-const navTogglers = document.querySelectorAll(".js-nav-toggler");
+const navTogglers = document.querySelectorAll(".js-nav-toggler, .js-nav-link");
 
 Array.from(navTogglers).forEach((btn) => {
   addClickEvent(btn, function () {
@@ -11,9 +11,7 @@ Array.from(navTogglers).forEach((btn) => {
 });
 
 /*
----> 
     #Click Event Handler
--->
 */
 function addClickEvent(target, handler) {
   target.addEventListener("click", handler);

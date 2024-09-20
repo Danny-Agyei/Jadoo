@@ -44,7 +44,7 @@
             <li><a href="#book" class="navbar__link js-nav-link"> Bookings </a></li>
           </ul>
           <div class="navbar__action l-flex-row u-align-center">
-            <a href="#" class="js-nav-link">Login</a>
+            <a href="#" class="btn navbar__btn--link js-nav-link">Login</a>
             <a href="#" class="navbar__btn btn js-nav-link">Sign up</a>
           </div>
         </nav>
@@ -87,9 +87,9 @@
         #Services
     -->
     <section id="service" class="service">
-      <img src="assets/images/service-bg.png" alt="" class="service__bg">
       <div class="l-container">
         <div class="l-inner">
+          <img src="assets/images/service-bg.png" alt="" class="service__bg">
           <p class="u-section-label">
             Category
           </p>
@@ -97,22 +97,26 @@
           <div class="l-grid service__wrapper">
             <ul class="service__list l-grid">
               <li class="service__item l-flex-col">
-                <img src="assets/images/weather.png" alt="" arial-hidden="true" class="service__img">
+                <img src="assets/images/weather.png" alt="" arial-hidden="true" class="service__img" width="60"
+                  height="60">
                 <h3 class="service__title u-title">Calculated Weather </h3>
                 <p class="service__text">Built Wicket longer admire do barton vanity itself do in it.</p>
               </li>
               <li class="service__item l-flex-col">
-                <img src="assets/images/flight.png" alt="" arial-hidden="true" class="service__img">
+                <img src="assets/images/flight.png" alt="" arial-hidden="true" class="service__img" width="60"
+                  height="60">
                 <h3 class="service__title u-title">Best Flights</h3>
                 <p class="service__text">Engrossed listening. Park gate sell they west hard for the.</p>
               </li>
               <li class="service__item l-flex-col">
-                <img src="assets/images/event.png" alt="" arial-hidden="true" class="service__img">
+                <img src="assets/images/event.png" alt="" arial-hidden="true" class="service__img" width="60"
+                  height="60">
                 <h3 class="service__title u-title">Local Events</h3>
                 <p class="service__text">Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
               </li>
               <li class="service__item l-flex-col">
-                <img src="assets/images/customization.png" alt="" arial-hidden="true" class="service__img">
+                <img src="assets/images/customization.png" alt="" arial-hidden="true" class="service__img" width="60"
+                  height="60">
                 <h3 class="service__title u-title">Customization</h3>
                 <p class="service__text">We deliver outsourced
                   aviation services for
@@ -180,26 +184,26 @@
       <div class="l-container">
         <div class="l-inner book__inner l-grid">
           <div class="book__content">
-            <p class="u-section-label">Easy and Fast</p>
+            <p class="u-section-label book__title">Easy and Fast</p>
             <h2 class="book__headline u-headline-md">Book your next trip
               in 3 easy steps</h2>
             <ul class="book__steps l-grid">
               <li class="book__steps-item l-flex-col">
-                <img src="assets/images/step-1.png" alt="" class="book__icon" aria-hidden="true">
+                <img src="assets/images/step-1.png" alt="" class="book__icon" aria-hidden="true" width="60" height="60">
                 <div>
                   <h4 class="book__title">Choose Destination</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                 </div>
               </li>
               <li class="book__steps-item l-flex-col">
-                <img src="assets/images/step-2.png" alt="" class="book__icon" aria-hidden="true">
+                <img src="assets/images/step-2.png" alt="" class="book__icon" aria-hidden="true" width="60" height="60">
                 <div>
                   <h4 class="book__title">Make Payment</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                 </div>
               </li>
               <li class="book__steps-item l-flex-col">
-                <img src="assets/images/step-3.png" alt="" class="book__icon" aria-hidden="true">
+                <img src="assets/images/step-3.png" alt="" class="book__icon" aria-hidden="true" width="60" height="60">
                 <div>
                   <h4 class="book__title">Reach Airport on Selected Date</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
@@ -221,12 +225,12 @@
       <div class="l-container">
         <div class="l-inner">
           <div class="testimonial__inner l-flex-col">
-            <div>
-              <p class="u-section-label">Testimonials</p>
+            <div class="testimonial__column">
+              <p class="u-section-label testimonial__title">Testimonials</p>
               <h2 class="testimonial__headline u-headline-md">What people say
                 about Us.</h2>
             </div>
-            <ul class="testimonial__list owl-theme owl-carousel">
+            <ul class="testimonial__list testimonial__column owl-theme owl-carousel">
               <li class="testimonial__item item">
                 <img src="assets/images/testimonial-img.png" alt="A happy client" class="testimonial__img">
                 <p class="testimonial__desc">On the Windows talking painted pasture yet its express parties use. Sure
@@ -399,12 +403,13 @@
         loop: true,
         margin: 30,
         autoplay: true,
-        autoPlayTimeout: 200,
+        autoHeight: true,
+        autoPlayTimeout: 1000,
         autoplaySpeed: 1800,
+        smartSpeed: 800,
         autoplayHoverPause: true,
         nav: false,
         dots: false,
-        mouseDrag: false,
         responsiveClass: true,
         responsive: {
           768: {

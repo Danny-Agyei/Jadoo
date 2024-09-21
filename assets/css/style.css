@@ -82,6 +82,7 @@
     --color-text-white: #fff;
 
     /* Background Color  */
+    --color-bg-primary: #181E4B;
     --color-bg-white: #fff;
     --color-bg-accent: #df6951;
     --color-bg-accent-light: #F1A501;
@@ -236,18 +237,19 @@ input:focus {
     max-width: max-content;
     -moz-appearance: none;
     text-align: center;
+    transition: all var(--trainsition-1);
     -webkit-appearance: none;
 }
 
-.btn:focus,
-.btn:active {
-    background-color: transparent;
-    outline: none;
-}
 
 .btn--primary {
     background-color: var(--color-bg-accent-light);
     color: var(--color-text-white);
+}
+
+.btn--primary:is(:hover, :focus-visible),
+.btn--accent:is(:hover, :focus-visible) {
+    background-color: var(--color-bg-primary);
 }
 
 .btn--accent {
@@ -258,6 +260,11 @@ input:focus {
 .btn--sm {
     height: 55px;
     padding: var(--spacing-4x) var(--spacing-6x);
+}
+
+.btn--md {
+    height: 55px;
+    padding: var(--spacing-4x) var(--spacing-8x);
 }
 
 /* Layout */
@@ -396,7 +403,7 @@ input:focus {
 }
 
 .navbar__btn {
-    transition: all var(--transition-all);
+    transition: all var(--transition-2);
     border: 1px solid var(--color-text-black);
     padding: var(--spacing-2x) var(--spacing-7x);
 }
@@ -426,7 +433,7 @@ input:focus {
     right: 0;
     width: 250px;
     height: 250px;
-    background-image: url("../assets/images/hero-bg.png");
+    background-image: url("assets/images/hero-bg.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -457,7 +464,7 @@ input:focus {
 }
 
 .hero__tag::after {
-    background-image: url("../assets/images/line.png");
+    background-image: url("assets/images/line.png");
     bottom: 5px;
     content: "";
     left: -15px;
@@ -532,7 +539,7 @@ input:focus {
 }
 
 .service__item:nth-child(2)::after {
-    background-image: url("../assets/images/destination-bg.png");
+    background-image: url("assets/images/destination-bg.png");
     background-repeat: no-repeat;
     background-position: bottom left;
     content: "";
@@ -622,7 +629,7 @@ input:focus {
 }
 
 .book__cover {
-    background-image: url("../assets/images/book__cover.png");
+    background-image: url("assets/images/book__cover.png");
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: cover;
@@ -687,7 +694,7 @@ input:focus {
 }
 
 .newsletter__wrapper {
-    background-image: url("../assets/images/form-bg.png");
+    background-image: url("assets/images/form-bg.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -833,8 +840,13 @@ input:focus {
         height: 400px;
     }
 
+    .hero__content {
+        text-align: left;
+    }
+
     .hero__action {
         gap: var(--spacing-8x);
+        flex-direction: row;
     }
 
     .hero__btn {

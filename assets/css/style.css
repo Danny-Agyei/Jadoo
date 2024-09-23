@@ -450,7 +450,7 @@ input:focus {
     right: 0;
     width: 250px;
     height: 250px;
-    background-image: url(".../assets/images/hero-bg.png");
+    background-image: url("../images/hero-bg.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,7 +484,7 @@ input:focus {
 }
 
 .hero__tag::after {
-    background-image: url(".../assets/images/line.png");
+    background-image: url("../images/line.png");
     bottom: 5px;
     content: "";
     left: -15px;
@@ -562,7 +562,7 @@ input:focus {
 }
 
 .service__item:nth-child(2)::after {
-    background-image: url(".../assets/images/destination-bg.png");
+    background-image: url("../images/destination-bg.png");
     background-repeat: no-repeat;
     background-position: bottom left;
     content: "";
@@ -594,15 +594,23 @@ input:focus {
 .dest__list {
     margin-top: var(--spacing-8x);
     gap: var(--spacing-10x);
+    position: relative;
 }
 
-.dest__bg {
-    bottom: 30px;
+.dest__list::after {
+    content: "";
+    background-image: url("../images/dest-bg.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 10px;
     position: absolute;
-    right: -16px;
+    left: 72%;
     width: 100px;
+    height: 300px;
     z-index: -1;
 }
+
 
 
 .dest__item {
@@ -616,6 +624,7 @@ input:focus {
 .dest__item:hover>.dest__img {
     transform: scale(1.05);
 }
+
 
 .dest__img {
     transition: transform 800ms ease;
@@ -661,7 +670,7 @@ input:focus {
 }
 
 .book__cover {
-    background-image: url(".../assets/images/book__cover.png");
+    background-image: url("../images/book__cover.png");
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: cover;
@@ -726,7 +735,7 @@ input:focus {
 }
 
 .newsletter__wrapper {
-    background-image: url(".../assets/images/form-bg.png");
+    background-image: url("../images/form-bg.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -737,7 +746,7 @@ input:focus {
 .newsletter__headline {
     font-size: var(--text-size-h5);
     font-weight: var(--fw-600);
-    max-width: 720dpx;
+    max-width: 800px;
     margin: 0 auto;
     line-height: var(--line-height-body);
 }
@@ -837,12 +846,6 @@ input:focus {
         max-width: 545px;
         margin: 0 auto;
     }
-
-    /* Destination  */
-    .dest__bg {
-        right: -50px;
-        bottom: 80px;
-    }
 }
 
 /* Screen larger than 760px  */
@@ -894,6 +897,10 @@ input:focus {
         flex-wrap: wrap;
         gap: var(--spacing-6x);
         margin-top: var(--spacing-12x);
+    }
+
+    .dest__list::after {
+        left: 260px;
     }
 
     .dest__item {
@@ -1008,7 +1015,7 @@ input:focus {
     /* Hero  */
     .hero::after {
         width: 600px;
-        height: 600px;
+        height: 680px;
         z-index: 1;
     }
 
@@ -1051,6 +1058,11 @@ input:focus {
     .dest__list {
         flex-wrap: nowrap;
         gap: var(--spacing-6x);
+    }
+
+    .dest__list::after {
+        right: -40px;
+        left: unset;
     }
 
     .dest__item {
@@ -1195,6 +1207,11 @@ input:focus {
     /* Destination  */
     .dest__list {
         gap: var(--spacing-8x);
+    }
+
+    /* Partners  */
+    .partners__img {
+        width: 170px;
     }
 
     /* Footer  */

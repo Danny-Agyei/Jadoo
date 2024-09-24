@@ -748,7 +748,7 @@ input:focus {
 
 .newsletter__form-control {
     height: 55px;
-    margin: var(--spacing-6x) 0 0;
+    margin: var(--spacing-6x) 0 var(--spacing-4x);
     position: relative;
     width: 100%;
 }
@@ -925,6 +925,10 @@ input:focus {
     /* Newsletter  */
     .newsletter__headline {
         margin-bottom: var(--spacing-6x);
+    }
+
+    .newsletter__form-control {
+        margin: 0;
     }
 
     .newsletter__form-group {

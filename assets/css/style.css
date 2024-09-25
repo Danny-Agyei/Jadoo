@@ -1011,8 +1011,8 @@ button:active {
 
     /* Hero  */
     .hero::after {
-        width: 600px;
-        height: 680px;
+        width: 640px;
+        height: 640px;
         z-index: 1;
     }
 
@@ -1032,7 +1032,6 @@ button:active {
 
     .hero__banner {
         z-index: 3;
-        /* max-width: 440px; */
         position: absolute;
         right: 0;
         top: 50%;

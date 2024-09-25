@@ -159,6 +159,12 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+
+input {
+    outline: none;
+}
+
+
 a:active {
     outline: none;
 }
@@ -185,12 +191,6 @@ button:focus,
 button:active {
     outline: none;
     box-shadow: none;
-}
-
-input,
-input:focus {
-    border: none;
-    outline: none;
 }
 
 /*<--------------------> 
@@ -337,7 +337,7 @@ input:focus {
 }
 
 .header__menu {
-    width: 30px;
+    width: 25px;
     z-index: 3;
     position: relative;
 }
@@ -359,7 +359,7 @@ input:focus {
 }
 
 .logo {
-    width: 100px;
+    width: 85px;
     position: relative;
     z-index: 3;
 }

@@ -1181,7 +1181,12 @@ button:active {
         gap: var(--spacing-16x);
     }
 
-    /* Hero */
+    /* Hero  */
+    .hero::after {
+        width: 680px;
+        height: 680px;
+    }
+
     .hero__inner {
         gap: 0;
         grid-template-columns: 1fr 0.8fr;

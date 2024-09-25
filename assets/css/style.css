@@ -132,6 +132,10 @@ body {
     overflow-x: hidden;
 }
 
+body.has-no-overflow {
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -312,13 +316,13 @@ button:active {
 /* Header  */
 .header {
     padding: var(--spacing-6x) 0;
-    position: relative;
-    background-color: var(--color-bg-white);
+    position: absolute;
     width: 100%;
     line-height: 0;
 }
 
 .header.is-active {
+    background-color: var(--color-bg-white);
     box-shadow: var(--box-shadow-3);
     position: fixed;
     top: 0;
@@ -343,7 +347,8 @@ button:active {
 }
 
 .header__overlay {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
     height: 100vh;
     left: 0;
     visibility: hidden;
@@ -436,6 +441,9 @@ button:active {
 }
 
 /* Hero  */
+.hero {
+    padding-top: var(--spacing-18x);
+}
 
 .hero::after {
     content: "";

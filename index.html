@@ -24,8 +24,8 @@
   <!-- 
       #Preloaders
   -->
-  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
-  <link rel="preload" href="./assets/images/hero-bg.png" as="image">
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image" fetchpriority="high">
+  <link rel="preload" href="./assets/images/hero-bg.png" as="image" fetchpriority="high">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
     <div class="l-container">
       <div class="l-flex-row header__warapper u-align-center u-justify-between">
         <a href="#">
-          <img src="assets/images/logo.png" alt="Jadoo home" class="logo">
+          <img src="assets/images/logo.png" alt="Jadoo home" class="logo" width="80" height="80">
         </a>
         <button class="btn" aria-label="open nav menu" aria-controls="main-nav">
           <img src="./assets/images/menu.png" alt="" class="header__menu js-nav-toggler" width="25" height="25">
@@ -44,10 +44,10 @@
         <nav class="navbar js-nav l-flex-col" id="main-nav" aria-label="page">
           <div class="navbar__header l-flex-row u-justify-between u-align-center">
             <a href="#">
-              <img src="assets/images/logo.png" alt="Jadoo home" class="logo js-nav-toggler">
+              <img src="assets/images/logo.png" alt="Jadoo home" class="logo js-nav-toggler" width="80" height="80">
             </a>
             <button class="btn" aria-label="close nav menu" aria-controls="main-nav">
-              <img src="assets/images/close.svg" alt="" class="navbar__close js-nav-toggler">
+              <img src="assets/images/close.svg" alt="" class="navbar__close js-nav-toggler" width="20" height="20">
             </button>
           </div>
           <ul class="navbar__list l-flex-col">
@@ -167,7 +167,7 @@
           <ul class="dest__list l-flex-col u-align-center">
             <li class="dest__item">
               <img src="assets/images/destination-1.png" alt="Ancient Building in Rome,italy" class="dest__img"
-                width="300" height="400">
+                width="300" height="400" loading="lazy">
               <div class="dest__content">
                 <div class="dest__header l-flex-row u-align-center u-justify-between">
                   <p>Rome,Italy</p>
@@ -181,7 +181,7 @@
             </li>
             <li class="dest__item">
               <img src="assets/images/destination-2.png" alt="Ancient Building in Rome,italy" class="dest__img"
-                width="300" height="400">
+                width="300" height="400" loading="lazy">
               <div class="dest__content">
                 <div class="dest__header l-flex-row u-align-center u-justify-between">
                   <p>London,UK</p>
@@ -195,7 +195,7 @@
             </li>
             <li class="dest__item">
               <img src="assets/images/destination-3.png" alt="Ancient Building in Rome,italy" class="dest__img"
-                width="300" height="400">
+                width="300" height="400" loading="lazy">
               <div class="dest__content">
                 <div class="dest__header l-flex-row u-align-center u-justify-between">
                   <p>Full Europe</p>
@@ -226,7 +226,7 @@
               <li class="book__steps-item l-flex-col">
                 <img src="assets/images/step-1.png" alt="" class="book__icon" width="60" height="60">
                 <div>
-                  <h4 class="book__title">Choose Destination</h4>
+                  <h3 class="book__title">Choose Destination</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Urna, tortor tempus.
@@ -236,7 +236,7 @@
               <li class="book__steps-item l-flex-col">
                 <img src="assets/images/step-2.png" alt="" class="book__icon" width="60" height="60">
                 <div>
-                  <h4 class="book__title">Make Payment</h4>
+                  <h3 class="book__title">Make Payment</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Urna, tortor tempus.
@@ -246,7 +246,7 @@
               <li class="book__steps-item l-flex-col">
                 <img src="assets/images/step-3.png" alt="" class="book__icon" aria-hidden="true" width="60" height="60">
                 <div>
-                  <h4 class="book__title">Reach Airport on Selected Date</h4>
+                  <h3 class="book__title">Reach Airport on Selected Date</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Urna, tortor tempus.
@@ -376,7 +376,7 @@
             </p>
           </li>
           <li class="footer__item l-flex-col">
-            <h4 class="footer__title">Company</h4>
+            <h3 class="footer__title">Company</h3>
             <nav class="footer__nav" aria-label="Pages nav">
               <ul class="footer__nav-list l-flex-col">
                 <li>
@@ -392,7 +392,7 @@
             </nav>
           </li>
           <li class="footer__item l-flex-col">
-            <h4 class="footer__title">Contact</h4>
+            <h3 class="footer__title">Contact</h3>
             <nav class="footer__nav" aria-label="Pages nav">
               <ul class="footer__nav-list l-flex-col">
                 <li>
@@ -408,7 +408,7 @@
             </nav>
           </li>
           <li class="footer__item l-flex-col">
-            <h4 class="footer__title">More</h4>
+            <h3 class="footer__title">More</h3>
             <nav class="footer__nav" aria-label="Pages nav">
               <ul class="footer__nav-list l-flex-col">
                 <li>
